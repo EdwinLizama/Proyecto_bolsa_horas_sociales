@@ -1,0 +1,130 @@
+/* Importar fuente Libre Baskerville */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+/* Variables de color */
+:root {
+    /* Modo Claro */
+    --color-primario: #B22222;
+    --color-texto: #555555;
+    --color-fondo: #f4f4f4;
+    --color-fondo-formulario: rgba(255, 255, 255, 0.9);
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+    --color-primario: #FF8C00;
+    --color-texto: #e0e0e0;
+    --color-fondo: #1e1e1e;
+    --color-fondo-formulario: rgba(50, 50, 50, 0.9);
+}
+
+/* Estilos globales */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Libre Baskerville', serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+}
+
+.logo-facultad {
+    max-height: 150px; /* Imagen más grande */
+    margin-bottom: 15px;
+}
+
+.titulo-principal {
+    color: var(--color-primario);
+    font-size: 2.2rem; /* Título más grande */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Formulario */
+.login-container {
+    max-width: 500px; /* Formulario más ancho */
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-card {
+    background: var(--color-fondo-formulario);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de campos */
+.form-control {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    padding: 10px;
+    font-size: 1rem;
+    color: var(--color-texto);
+    background: transparent;
+}
+
+.form-control::placeholder {
+    color: #999;
+}
+
+.input-group-text {
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+}
+
+.form-check-label, .text-muted {
+    color: var(--color-texto);
+}
+
+/* Botón de inicio de sesión */
+.btn-danger {
+    background-color: var(--color-primario);
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #a11d1d;
+}
+
+/* Botón de Modo Oscuro */
+.toggle-dark-mode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--color-primario);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-dark-mode:hover {
+    background-color: #a11d1d;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 1.8rem;
+    }
+
+    .login-card {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
